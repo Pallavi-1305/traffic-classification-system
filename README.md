@@ -88,6 +88,7 @@ Started Mininet with 1 switch and 3 hosts using remote controller.
 ## 5. Testing Connectivity using Ping
 
 All hosts successfully communicated with each other.
+
 ![Ping Test](Screenshot%20-51.png)
 
 <img width="648" height="247" alt="Screenshot -51" src="https://github.com/user-attachments/assets/013f007f-1bd2-478d-84d9-f5b05011c00a" />

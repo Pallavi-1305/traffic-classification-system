@@ -139,7 +139,7 @@ Controller detected UDP packets and updated statistics.
 
 ---
 
-## 11. Switch Details / Open vSwitch Proof
+## Switch Details / OpenFlow Proof
 
 Verified switch `s1` and active ports.
 

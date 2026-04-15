@@ -1,4 +1,4 @@
-<img width="962" height="1027" alt="Screenshot 1" src="https://github.com/user-attachments/assets/ed6e2aa0-b70f-4877-99f5-e851146a745d" /># Traffic Classification System using SDN (POX + Mininet)
+# Traffic Classification System using SDN (POX + Mininet)
 
 ## Objective
 The objective of this project is to classify network traffic based on protocol type using Software Defined Networking (SDN). The controller identifies and maintains statistics for:
@@ -144,7 +144,8 @@ Controller detected UDP packets and updated statistics.
 Verified switch `s1` and active ports.
 
 ![Switch Details](Screenshot%20-11.png)
-<img width="1010" height="180" alt="Screenshot -11" src="https://github.com/user-attachments/assets/5a81baad-b05b-4f12-a68a-73fb10c1ea48" />
+<img width="1212" height="721" alt="temp" src="https://github.com/user-attachments/assets/7baea2c1-54a9-4ab7-8323-f0036598c15b" />
+
 
 ---
 

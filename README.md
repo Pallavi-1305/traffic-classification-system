@@ -1,19 +1,11 @@
-# Traffic Classification System using SDN (POX + Mininet)
+# Traffic Analysis System using SDN (POX + Mininet)
 
 ## Objective
-The objective of this project is to classify network traffic based on protocol type using Software Defined Networking (SDN). The controller identifies and maintains statistics for:
-
-- TCP Packets
-- UDP Packets
-- ICMP Packets
-- Other Packets
-
-The project demonstrates controller-switch communication, packet handling, and traffic monitoring using POX and Mininet.
+The objective of this project is to classify network traffic into TCP, UDP, ICMP, and OTHER packets, monitor live traffic metrics, detect traffic spikes, and generate comparative reports before and after high traffic conditions.
 
 ---
 
 ## Tools Used
-
 - Ubuntu Virtual Machine
 - Mininet
 - POX Controller
@@ -24,187 +16,182 @@ The project demonstrates controller-switch communication, packet handling, and t
 ---
 
 ## Topology Used
-
 - 1 Switch (`s1`)
 - 3 Hosts (`h1`, `h2`, `h3`)
-- Remote Controller (`c0`)
+- 1 Remote Controller (`c0`)
 
 ---
 
-## Project Files
-
+## Project File
 - `traffic_classification.py`
-- `README.md`
 
 ---
 
 # Execution Steps with Screenshots
 
----
+## 1. Updated Code File
+Screenshot of the final controller code with live metrics and report logic.
 
-## 1. Cloning POX Repository
+![Updated Code](code_updated.png)
 
-Downloaded the POX controller using Git.
+<img width="894" height="846" alt="image" src="https://github.com/user-attachments/assets/d961e9ea-9e4c-492f-a27f-4c7bb2031b4c" />
 
-![Cloning POX](Screenshot%201.png)
-<img width="962" height="1027" alt="Screenshot 1" src="https://github.com/user-attachments/assets/ddafc511-71a0-4e78-a954-e1341c017978" />
+<img width="869" height="790" alt="image" src="https://github.com/user-attachments/assets/548b7be6-540a-459d-8dbc-7aa2ac596c34" />
 
----
+<img width="879" height="772" alt="image" src="https://github.com/user-attachments/assets/88e69d4e-3cb8-4b91-8866-b1bcaa6bf9a7" />
 
-## 2. Creating Controller Code File
-
-Created `traffic_classification.py` inside the forwarding folder.
-
-### Code Screenshot - Part 1
-
-![Code Part 1](Screenshot%20-21.png)
-<img width="1053" height="766" alt="Screenshot -22" src="https://github.com/user-attachments/assets/12759795-1bf5-4554-88b5-3943c8316707" />
-
-### Code Screenshot - Part 2
-
-![Code Part 2](Screenshot%20-22.png)
-<img width="1053" height="766" alt="Screenshot -22" src="https://github.com/user-attachments/assets/5e91d5b4-dbeb-4c20-b760-84300e24c958" />
+<img width="978" height="431" alt="image" src="https://github.com/user-attachments/assets/107c27e2-04b9-4f1e-b35a-347c08c89b77" />
 
 ---
 
-## 3. Running POX Controller
+## 2. Controller Started
+Started the POX controller successfully.
 
-Started the custom traffic classification controller.
+![Controller Started](controller_started.png)
 
-![POX Running](Screenshot%20-31.png)
-<img width="1097" height="347" alt="Screenshot -31" src="https://github.com/user-attachments/assets/1cfc18a2-3a51-4e07-97ee-3d30aec51995" />
+<img width="1184" height="359" alt="image" src="https://github.com/user-attachments/assets/3c4523ff-5b31-45eb-b86e-fc1261f67be0" />
 
----
-
-## 4. Starting Mininet Topology
-
-Started Mininet with 1 switch and 3 hosts using remote controller.
-
-![Mininet Started](Screenshot%20-41.png)
-<img width="1057" height="745" alt="Screenshot -41" src="https://github.com/user-attachments/assets/bd2e3d32-6aed-46e0-8958-6c02264577a0" />
 
 ---
 
-## 5. Testing Connectivity using Ping
+## 3. Mininet Started
+Started the Mininet topology.
 
-All hosts successfully communicated with each other.
+![Mininet Started](mininet_started.png)
 
-![Ping Test](Screenshot%20-51.png)
+<img width="919" height="482" alt="image" src="https://github.com/user-attachments/assets/566d3ee2-f486-47fc-be8a-d179264bac8f" />
 
-<img width="648" height="247" alt="Screenshot -51" src="https://github.com/user-attachments/assets/013f007f-1bd2-478d-84d9-f5b05011c00a" />
 
 ---
 
-## 6. ICMP Detection Logs
+## 4. Nodes Output
+Displayed all nodes in the topology.
 
-Controller detected ICMP packets and updated statistics.
+![Nodes](nodes.png)
 
-![ICMP Logs](Screenshot%20-61.png)
-<img width="1052" height="882" alt="Screenshot -61" src="https://github.com/user-attachments/assets/c23b5e0c-28cd-48da-9285-006b260362ed" />
+<img width="543" height="156" alt="image" src="https://github.com/user-attachments/assets/d8498cd1-b160-43bd-a302-a54918243153" />
+
+
+---
+
+## 5. Pingall Test (Before Spike)
+Tested connectivity between all hosts.
+
+![Pingall](pingall.png)
+
+<img width="737" height="194" alt="image" src="https://github.com/user-attachments/assets/79a77388-207f-4f16-9c47-5a2d812eea48" />
+
+
+---
+
+## 6. Live Metrics During Before Phase
+Displayed packet type, packets/sec, and bytes/sec during normal traffic.
+
+![Before Metrics](before_live_metrics.png)
+
+<img width="1008" height="777" alt="image" src="https://github.com/user-attachments/assets/5cac08d8-c4b8-4c03-942b-9e7193853fe4" />
+
 
 ---
 
 ## 7. TCP Traffic Test using iperf
+Generated TCP traffic spike.
 
-Generated TCP traffic between hosts.
+![TCP Test](tcp_test.png)
 
-![TCP Test](Screenshot%20-71.png)
-<img width="997" height="232" alt="Screenshot -71" src="https://github.com/user-attachments/assets/d4eb4026-5bdb-4c90-918c-678eeca56c87" />
+<img width="985" height="210" alt="image" src="https://github.com/user-attachments/assets/e5acac08-b994-4dab-95f4-3fb5ab13a031" />
+
 
 ---
 
-## 8. TCP Detection Logs
+## 8. Live Metrics After Spike (TCP)
+Displayed live metrics during high TCP traffic.
 
-Controller detected TCP packets successfully.
+![After TCP Metrics](after_tcp_metrics.png)
 
-![TCP Logs](Screenshot%20-81.png)
-<img width="888" height="502" alt="Screenshot -91" src="https://github.com/user-attachments/assets/1911ad79-e473-4372-9e11-eb454bea25e7" />
+<img width="1020" height="663" alt="image" src="https://github.com/user-attachments/assets/a48baef1-edcc-40b9-a928-139246f008bd" />
+
 
 ---
 
 ## 9. UDP Traffic Test using iperf
+Generated UDP traffic.
 
-Generated UDP traffic between hosts.
+![UDP Test](udp_test.png)
 
-![UDP Test](Screenshot%20-91.png)
-<img width="888" height="502" alt="Screenshot -91" src="https://github.com/user-attachments/assets/b730db8c-c147-46c6-ad57-65bc37639cfb" />
-
----
-
-## 10. UDP Detection Logs
-
-Controller detected UDP packets and updated statistics.
-
-![UDP Logs](Screenshot%20-10.png)
-<img width="1002" height="788" alt="Screenshot -10" src="https://github.com/user-attachments/assets/00b1d054-16af-4da0-868a-316f7a479b2c" />
+<img width="1002" height="471" alt="image" src="https://github.com/user-attachments/assets/ea23578b-d32b-4e31-88d2-a22bf9364445" />
 
 ---
 
-## Switch Details / OpenFlow Proof
+## 10. Live Metrics for UDP
+Displayed UDP packet metrics.
 
-Verified switch `s1` and active ports.
+![UDP Metrics](udp_metrics.png)
 
-![Switch Details](Screenshot%20-11.png)
-<img width="1212" height="721" alt="temp" src="https://github.com/user-attachments/assets/7baea2c1-54a9-4ab7-8323-f0036598c15b" />
+<img width="1128" height="523" alt="image" src="https://github.com/user-attachments/assets/a90eb20f-cdaf-4c6b-b870-57f5e8938209" />
 
 
 ---
 
-## 12. Exiting Mininet
+## 11. Final Before Spike Report Table
+Summary table for traffic before spike.
 
-Closed the running topology successfully.
+![Before Table](before_table.png)
 
-![Exit Mininet](Screenshot%20-12.png)
-<img width="526" height="252" alt="Screenshot -12" src="https://github.com/user-attachments/assets/fb2009f8-4aed-48ba-8f18-a60b867be62f" />
-
----
-
-## 13. Cleanup Command
-
-Removed old Mininet configurations and cleaned the environment.
-
-![Cleanup](Screenshot%20-13.png)
-<img width="1192" height="527" alt="Screenshot -13" src="https://github.com/user-attachments/assets/d8c631f0-35c6-4fd1-9076-64f9b71183be" />
+<img width="955" height="208" alt="image" src="https://github.com/user-attachments/assets/c0e5670e-d8b3-4ac3-96ca-e58815e4a15c" />
 
 ---
 
-# Controller Logic Summary
+## 12. Final After Spike Report Table
+Summary table for traffic after spike.
 
-The POX controller performs the following tasks:
+![After Table](after_table.png)
 
-- Receives packets from switch
-- Checks protocol type
-- Classifies as TCP / UDP / ICMP / Other
-- Updates live statistics
-- Floods packets for connectivity
+---<img width="884" height="153" alt="image" src="https://github.com/user-attachments/assets/4ba0be4d-9e14-4e8e-a04f-fcfecbffdf93" />
+
+
+## 13. Switch Details
+Displayed Open vSwitch details.
+
+![Switch Details](switch_details.png)
+
+<img width="1194" height="735" alt="image" src="https://github.com/user-attachments/assets/c3aead78-36af-45b5-be49-1ed6a858addb" />
 
 ---
 
-# Test Scenarios
+## 14. Cleanup
+Cleaned old Mininet configuration.
 
-## Scenario 1: ICMP Traffic
-Used `pingall` to generate ICMP packets.
+![Cleanup](cleanup.png)
 
-## Scenario 2: TCP Traffic
-Used `iperf` to generate TCP packets.
+<img width="1190" height="617" alt="image" src="https://github.com/user-attachments/assets/4c69afd7-9aa4-47b7-9986-86e6b22c37e9" />
 
-## Scenario 3: UDP Traffic
-Used `iperf -u` to generate UDP packets.
+---
+
+# Features Implemented
+- Packet classification (TCP, UDP, ICMP, OTHER)
+- Live traffic monitoring
+- Packets per second calculation
+- Bytes per second calculation
+- Automatic traffic spike detection
+- Before and After traffic comparison tables
+- Traffic percentage analysis
+
+---
+
+# Working Principle
+When a packet reaches the switch, it is sent to the POX controller using PacketIn. The controller checks the packet protocol type and classifies it. It calculates live traffic metrics such as packets per second and bytes per second. When heavy traffic starts using iperf, the system automatically detects the spike and moves to the after-spike phase. Finally, it prints two analysis tables comparing traffic before and after the spike.
 
 ---
 
 # Results
-
-- Successfully detected ICMP traffic
-- Successfully detected TCP traffic
-- Successfully detected UDP traffic
-- Maintained packet statistics dynamically
-- Demonstrated SDN controller and switch communication
+- Successfully detected TCP, UDP, ICMP, and OTHER packets
+- Displayed live metrics during traffic flow
+- Detected traffic spike after iperf execution
+- Generated before and after comparison reports
+- Demonstrated SDN-based traffic monitoring system
 
 ---
 
 # Conclusion
-
-This project successfully implemented a Traffic Classification System using SDN concepts with POX controller and Mininet. The controller classified packets based on protocol type and displayed real-time statistics.
-
----
+This project successfully implemented a Traffic Analysis System using SDN concepts with POX and Mininet. It classified packets, measured live performance, detected traffic spikes, and generated useful traffic reports.

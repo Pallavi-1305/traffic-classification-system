@@ -37,10 +37,14 @@ Screenshot of the final controller code with live metrics and report logic.
 <img width="894" height="846" alt="image" src="https://github.com/user-attachments/assets/d961e9ea-9e4c-492f-a27f-4c7bb2031b4c" />
 
 
+
 <img width="869" height="790" alt="image" src="https://github.com/user-attachments/assets/548b7be6-540a-459d-8dbc-7aa2ac596c34" />
 
 
+
 <img width="879" height="772" alt="image" src="https://github.com/user-attachments/assets/88e69d4e-3cb8-4b91-8866-b1bcaa6bf9a7" />
+
+
 
 
 <img width="978" height="431" alt="image" src="https://github.com/user-attachments/assets/107c27e2-04b9-4f1e-b35a-347c08c89b77" />

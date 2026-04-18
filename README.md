@@ -29,10 +29,10 @@ The objective of this project is to classify network traffic into TCP, UDP, ICMP
 
 # Execution Steps with Screenshots
 
-## 1. Updated Code File
+## 1.Code File
 Screenshot of the final controller code with live metrics and report logic.
 
-![Updated Code]
+![Code]
 
 <img width="894" height="846" alt="image" src="https://github.com/user-attachments/assets/d961e9ea-9e4c-492f-a27f-4c7bb2031b4c" />
 
